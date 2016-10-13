@@ -1,3 +1,4 @@
+# my code may not work with python 3.5 cause it is made for 2.7 version
 libs =["Dragon Freak","Excuses"]
 
 # precode
@@ -31,6 +32,7 @@ def excuses():
     I cannot come to %s ,
     because there is %s %s flu
     ''' %(place , adjExcuse , bodyPart)
+    print(fMadLib)
 
 # main code for user interaction
 while True:
