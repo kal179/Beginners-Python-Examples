@@ -38,6 +38,10 @@ siliconValley.sort(reverse = True)
 sorted(siliconValley , reverse = True) # seperate the reverse with comma
 print(siliconValley)
 
+# Okay what if i dont know about the index of an element but i want to print only that element
+googleIndex = siliconValley.index('Google')
+print(siliconValley[googleIndex])
+
 # I am tired of watching those elements again and again
 # How I am going to do thats
 # easy
