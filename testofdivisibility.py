@@ -1,4 +1,4 @@
-# pre code
+#pre-code
 def testDivisibility():
     print(" ")
     toTest = int(raw_input("Enter number of which you want to test Divisibility : "))
@@ -11,34 +11,28 @@ def testDivisibility():
         print(str(toTest) + " is not divisible " + str(test))
 
 # MAIN code
-while True:
-    print(" ")
-    print("--------------------Start-------------------")
-    user = raw_input("Start or End : ")
+print(" ")
+print("--------------------Start-------------------")
+user = raw_input("Start or End : ")
 
-    if user.strip() == "Start" :
-        print(testDivisibility())
+if user.strip() == "End" :
         print(" ")
+        print("------------------Program Ended--------------")
+        print(" ")
+elif user.strip() == "Start" :
+    print(testDivisibility())
+    print(" ")
+
+    while True:
+    
         get = raw_input("Start again or End : ")
         if get.strip() == "Start again":
             print("---------------Start Again----------------")
             print(" ")
+            print(testDivisibility())
             continue
         elif get.strip() == "End" :
             print(" ")
             print("------------------Program Ended--------------")
             print(" ")
             break
-        else :
-            break
-
-    elif user.strip() == "End" :
-        print(" ")
-        print("------------Program Ended-----------")
-        print(" ")
-        break
-
-    else :
-        print(" ")
-        print("Invalid Input. Try again")
-        continue
