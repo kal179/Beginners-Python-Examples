@@ -10,15 +10,15 @@ def testDivisibility():
     else :
         print(str(toTest) + " is not divisible " + str(test))
 
+print(" ")
+print("--------------------Start-------------------")
+user = raw_input("Start or End : ")
+
+if user.strip() == "Start" :
+        print(testDivisibility())
+        print(" ")        
 # MAIN code
 while True:
-    print(" ")
-    print("--------------------Start-------------------")
-    user = raw_input("Start or End : ")
-
-    if user.strip() == "Start" :
-        print(testDivisibility())
-        print(" ")
         get = raw_input("Start again or End : ")
         if get.strip() == "Start again":
             print("---------------Start Again----------------")
