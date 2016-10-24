@@ -1,2 +1,4 @@
 # Beginners-Python-Examples
-basic python programs as examples
+Basic python programs as examples
+All the examples are real world examples
+This examples are introduction to programming
