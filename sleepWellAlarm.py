@@ -17,7 +17,7 @@ def alarm(h,m,s):
     playSound = webbrowser.open_new(random.choice(linksToSounds))
 
 # Main code
-print(ctime(),\n)
+print(ctime(),'\n')
 startOrEnd = str(input('Set alarm or End : '))
 if startOrEnd.strip() == 'Set alarm':
     hours = int(input('Hours : '))
