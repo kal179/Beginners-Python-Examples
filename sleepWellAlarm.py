@@ -3,7 +3,7 @@
 # I havent really battle tested the program so it might contain bugs
 # If you come accross the bugs inform me
 
-from time import sleep
+from time import sleep,ctime
 import datetime
 import webbrowser
 import random
@@ -17,6 +17,7 @@ def alarm(h,m,s):
     playSound = webbrowser.open_new(random.choice(linksToSounds))
 
 # Main code
+print(ctime(),\n)
 startOrEnd = str(input('Set alarm or End : '))
 if startOrEnd.strip() == 'Set alarm':
     hours = int(input('Hours : '))
