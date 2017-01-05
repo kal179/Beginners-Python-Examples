@@ -102,29 +102,29 @@ class Analysis:
     		elif num % 2 != 0:
     			return(boole_False)
 
-    @classmethod
-    def isint(cls, data):
-    	if (type(data)  ==  int):
-    		return(boole_True)
-    	else:
-    		return(boole_False)
+    	@classmethod
+    	def isint(cls, data):
+    		if (type(data)  ==  int):
+    			return(boole_True)
+    		else:
+    			return(boole_False)
 
-    @classmethod
-    def isfloat(cls, data):
-    	if (type(data)  ==  float):
-    		return(boole_True)
-    	else:
-    		return(boole_False)
+    	@classmethod
+    	def isfloat(cls, data):
+    		if (type(data)  ==  float):
+    			return(boole_True)
+    		else:
+    			return(boole_False)
 
-    @classmethod
-    def isalpha(cls, data):
-    	if (type(data)  ==  str):
-    		return(boole_True)
-    	else:
-    		return(boole_False)
+    	@classmethod
+    	def isalpha(cls, data):
+    		if (type(data)  ==  str):
+    			return(boole_True)
+    		else:
+    			return(boole_False)
 
-    @classmethod		
-    def max(cls, data):
+    	@classmethod		
+    	def max(cls, data):
 		maxi = 0
 		for i in data:
 			if ( i > maxi ):
