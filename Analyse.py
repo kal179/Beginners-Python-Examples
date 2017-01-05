@@ -62,11 +62,11 @@ class Analysis:
 	def median(cls, data):
 		if len(data) % 2 != 0:
 			med = (len(data) + 1) / 2
-			return data[med]
+			return data[med - 1]
 		else:
 			med = (len(data) + 2) / 2
 			med_1 = len(data) / 2
-			mea = (data[med] + data[med_1]) / 2
+			mea = (data[med -1] + data[med_1 -1]) / 2
 			return mea 	
 		
 	@classmethod
