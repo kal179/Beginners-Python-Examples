@@ -3,7 +3,7 @@ import os
 
 def new_db(name = "my_db"):
 	db = bsddb.btopen(name + ".db" , "c")
-	db["Default"] = None
+	db["Default"] = "Erika"
 	return db["Default"]
 	db.close()
 
