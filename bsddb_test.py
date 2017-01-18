@@ -2,6 +2,7 @@ import bsddb
 import os
 
 def new_db(name = "my_db"):
+	os.chdir("D:\\")
 	db = bsddb.btopen(name + ".db" , "c")
 	db["Default"] = "Erika"
 	return db["Default"]
