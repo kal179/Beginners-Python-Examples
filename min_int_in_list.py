@@ -1,5 +1,7 @@
 
 def  compare(li):
+	if (len(li) == 1):
+		return "Single Value To Compare {} in List".format(li[0])
 	res = 0
 	for i in range(len(li) - 1):
 		a = li[i]
