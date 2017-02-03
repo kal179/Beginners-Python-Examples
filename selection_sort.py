@@ -1,5 +1,7 @@
 """
-My Solution to Selection Sort Algorithm
+My Modified Solution to Selection Sort Algorithm
+instead of swapping elem it is appended to another
+temporary array. This makes algotrihm less complicated.
 """
 
 def selection_sort(array):
