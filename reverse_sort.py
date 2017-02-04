@@ -1,6 +1,6 @@
 """
 This sort is designed by me.
-First self designed Algorithm.
+First self designed sorting Algorithm.
 Kalpak Take
 """
 
