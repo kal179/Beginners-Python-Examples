@@ -7,6 +7,7 @@ kay is my nickname
 """
 
 def kay_sort(array):
+	print "Orignal List : {}".format(array)
 	for i in range(len(array)):
 		for n in range(len(array) - 1):
 			a = array[n]
@@ -14,6 +15,6 @@ def kay_sort(array):
 				tem = array[i]
 				array[i] = a 
 				array[n] = tem 
-	return array			
+	return "Sorted List : {}".format(array)			
 	
-print reverse_sort([123, 3455, 6577, 546, 345, 22, 56, 7])	
+print kay_sort([123, 4, 123, 4])	
