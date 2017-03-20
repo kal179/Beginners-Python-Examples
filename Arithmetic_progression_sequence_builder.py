@@ -16,5 +16,5 @@ class Arithmetic_progression(object):
 				for i in range(a, limit, diff):
 					seq.append(i + (a - 1) * 2)	
 				return seq 
-			
-print(Arithmetic_progression.arithmetic_sequence_builder(2, 2, 2))
+# Testing			
+print(Arithmetic_progression.arithmetic_sequence_builder(2, 2, 100))
