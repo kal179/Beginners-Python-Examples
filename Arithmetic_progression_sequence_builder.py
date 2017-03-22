@@ -12,8 +12,7 @@ class Arithmetic_progression(object):
 				return [a]
 			else:
 				seq = []
-				seq.append(a)
-				for i in range(a, limit, diff):
+				for i in range(0, limit, diff):
 					seq.append(i + (a - 1) * 2)	
 				return seq 
 # Testing			
