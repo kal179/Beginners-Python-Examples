@@ -17,3 +17,10 @@ class Arithmetic_progression(object):
 				return seq 
 # Testing			
 print(Arithmetic_progression.arithmetic_sequence_builder(2, 2, 100))
+print(Arithmetic_progression.arithmetic_sequence_builder(1, 10, 100))
+print(Arithmetic_progression.arithmetic_sequence_builder(11, 100, 10000))
+"""
+Still Some Bugs are to be fixed algo is not perfect
+like sometimes it omits first value of a in seq
+and it is first term.
+"""
