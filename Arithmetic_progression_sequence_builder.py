@@ -1,5 +1,4 @@
 
-
 class Arithmetic_progression(object):
 
 	@staticmethod
@@ -12,13 +11,18 @@ class Arithmetic_progression(object):
 				return [a]
 			else:
 				seq = []
-				for i in range(a, limit, diff):
+				for i in range(a, limit + 1, diff):
 					seq.append(i + (a - 1) * 2)	
-				return seq 
+				
+				if (a == 0):	
+					return seq[1:]
+				else:
+					return seq
 # Testing			
 print(Arithmetic_progression.arithmetic_sequence_builder(2, 2, 100))
 print(Arithmetic_progression.arithmetic_sequence_builder(1, 10, 100))
 print(Arithmetic_progression.arithmetic_sequence_builder(1, 5, 10000))
+
 """
 Still Some Bugs are to be fixed algo is not perfect
 like sometimes it omits first value of a in seq
