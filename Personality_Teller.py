@@ -6,9 +6,9 @@ personalities = ['Arrogant and Rude','Funny and Polite','Insane and Crazy'
 ,'Cool and Funny','Idiot and Crazy','Awesome and Crazy','Good and Smart','Cool and Smart',
 'Smart and Geek','Cool and Smart']
 
-def teller(li):
+def teller():
     name = str(input('Tell Your Name : '))
-    randPersonality = random.choice(li)
+    randPersonality = random.choice(personalities)
     return('According to your name You are ' + str(randPersonality) + '.')
 
-print(teller(personalities))
+print(teller())
