@@ -10,7 +10,7 @@ auth_email = input("Email of Author: ")
 descript = input("Description: ")
 filename = input("File to Compile(Add .py to file): ")
 
-# run this file in cmd "python CompileFiles.py build"
+# run this file in cmd "python CompileFiles.py build" or "python CompileFiles.py build_exe"
 # This setup in minimialistic
 
 setup(
