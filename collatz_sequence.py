@@ -15,14 +15,13 @@ def collatz(num):                             # defining the function
     else:
         return 'Enter a valid integer'
 
-    while (res == 1):                          #we need to exit the function after 1 is obtained
-        print(res)
-        exit(0)
-
-    while (res != 1):
-        print(res)
-        num = res
-        collatz(num)                          #the function should be executing until 1 is obtained
+    while True:
+        if (res == 1):                          #we need to exit the function after 1 is obtained
+            print(res)
+            exit(0)
+        elif (res != 1):
+            print(res)
+            collatz(res)                          #the function should be executing until 1 is obtained
 
 try:
     num = int(input('Enter an integer: '))           #asking for input and then calling the function also change input to raw_input in python 2x versions
