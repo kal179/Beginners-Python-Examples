@@ -11,9 +11,9 @@ def collatz(num):                             # defining the function
 
     elif (num % 2 != 0):
         res = num * 3 + 1
-
+        
     else:
-        print('Enter a valid integer')
+        return 'Enter a valid integer'
 
     while (res == 1):                          #we need to exit the function after 1 is obtained
         print(res)
