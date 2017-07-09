@@ -24,8 +24,9 @@ def collatz(num):                             # defining the function
         num = res
         collatz(num)                          #the function should be executing until 1 is obtained
 
-
-num = int(input('Enter an integer: '))           #asking for input and then calling the function also change input to raw_input in python 2x versions
-
+try:
+    num = int(input('Enter an integer: '))           #asking for input and then calling the function also change input to raw_input in python 2x versions
+except Exception as e:
+    print("Try again...")
 print("\nReaching one here....")
 collatz(num)
