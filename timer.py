@@ -5,7 +5,7 @@ import webbrowser
 def timer(minutes):
 	a = 0
 	while a != minutes: 
-		time.sleep(60)
+		time.sleep(59)
 		a = a + 1
 	print("<<<<<<Timed out>>>>>>")	
 	# I have not used return cause it termites the function
