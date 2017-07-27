@@ -1,9 +1,12 @@
 # ASCII value of a character
-while True:
-	getPlain = str(input('Character : '))
-	if len(getPlain) == 1:
-		print('ASCII value is ',ord(getPlain))
-		break
+def get_ascii(S):
+	if len(S) == 1:
+		return 'ASCII value of {} is {} '.format(S, ord(S))
 	else:
-		print('Entered value is a string and not a character')	
-		continue
+		return 'Entered value is a string and not a character'
+# test
+character = 'Z'
+character1 = 'z'
+print(get_ascii(character))
+print(get_ascii(character1))
+print(get_ascii("STack"))
