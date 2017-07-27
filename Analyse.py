@@ -1,144 +1,234 @@
+
+"""
+After looking at the code you might've thought that
+i've used too common `Exception` everywhere!
+That's because i'm too lazy to find or think about every single
+exception that can occur! 
+"""
+
+"""
+Changes you should make to use the class on single data set;
+def __init__(self, data):
+	self.data
+
+then,
+change all @classmethods to the methods operating on self.data
+and also change corresponding changes
+"""
 import math
 
 
 class AnalysisFunctions:
-	@staticmethod
-	def count(, n):
-		counter = 0
-		for i in :
-			if i == to_count:
-				counter = counter + 1
-		return counter		
+    @classmethod
+    def count(cls, to_check, n):
+        if not(isinstance(to_check, str) or isinstance(to_check, list)):
+            raise TypeError("Expected a string or list, but, got a {} instead!".format(type(to_check)))
+        else:
+            if isinstance(to_check, str):
+                to_check = [str(s) for s in to_check]
+            counter = 0
+            for _ in to_check:
+                if _ == n:
+                    counter = counter + 1
+            return counter
 
-	def add(self):
-		added = 0
-		for i in self.data:
-			added = added + i
-		return added	
+    @classmethod
+    def sum(cls, *args):
+        res = 0
+        try:
+            for i in args:
+                res += i
+        except Exception as e:
+            return e
+        else:
+            return res
 
-	def avg(self):
-		length = len(self.data)
-		add = 0
-		for i in self.data:
-			add = add + i 
-		avg_mean = add / length
-		return avg_mean 	
-
-	def mean(self):
-		meaned = []
-		for i in range(len(self.data) - 1):
-			a = self.data[i]
-			b = self.data[i + 1]
-			mean = math.sqrt(a * b)
-			meaned.append(mean)
-		return meaned	
-
-	def mul(self):
-		mult = 1
-		for i in self.data:
-			mult = mult * i 
-		return mult
-
-	def enum(self):
-		a = []
-		index = 0
-		for i in self.data:
-			tup = [index, i]
-			index = index + 1
-			a.append(tup)
-
-		for i in a:
-			print(tuple(i))
-		return None	
-							
-	@classmethod
-	def median(cls, data):
-		if len(data) % 2 != 0:
-			med = (len(data) + 1) / 2
-			return data[med - 1]
-		else:
-			med = (len(data) + 2) / 2
-			med_1 = len(data) / 2
-			mea = (data[med -1] + data[med_1 -1]) / 2
-			return mea 	
-		
-	@classmethod
-	def length(cls, dat):
-		counter = 0 
-		for i in dat:
-			counter = counter + 1
-		return counter		
-	
-	@classmethod	
-	def sqre(cls, num):
-		square = num ** 2
-		return square
-
-	@classmethod    
-	def isdivisible(cls, divi, get):
-		if (divi % get  ==  0):
-			return boole_True
-		else:
-			return boole_False	
-
-	@classmethod		
-	def isodd(cls, num):
- 		if (num % 2  !=  0):
-			return(boole_True)
-		elif (num % 2  ==  0):
-			return(boole_False)	
-
-	@classmethod		
-	def iseven(cls, num):
-		if num % 2 == 0:
-    			return(boole_True)
-    		elif num % 2 != 0:
-    			return(boole_False)
-
-    	@classmethod
-    	def isint(cls, data):
-    		if (type(data)  ==  int):
-    			return(boole_True)
-    		else:
-    			return(boole_False)
-
-    	@classmethod
-    	def isfloat(cls, data):
-    		if (type(data)  ==  float):
-    			return(boole_True)
-    		else:
-    			return(boole_False)
-
-    	@classmethod
-    	def isalpha(cls, data):
-    		if (type(data)  ==  str):
-    			return(boole_True)
-    		else:
-    			return(boole_False)
-
-    	@classmethod		
-    	def max(cls, data):
-		maxi = 0
-		for i in data:
-			if ( i > maxi ):
-				maxi = i
-			else:
-				i = i + 1
-		return maxi
-
-	@classmethod		
-    	def min(cls, data):
-		mini = max(data)
-		for i in data:
-			if ( i < mini ):
-				mini = i
-			else:
-				i = i + 1
-		return mini	
-	
-"""	
-from analysis import Analysis
-dat = [23,12,32,12,34,21,32,32,2,21,3,21,32,21,12,32,12,3,21,3,21,3,21,12]
-a = Analysis(dat)
-a.max(dat)
+    @classmethod
+    def mean(cls, arr):
+        try:
+            average = sum(arr) / len(arr)
+        except Exception as e:
+            return e
+        else:
+            return average
+    
+    @classmethod
+    def mean_arr(cls, li):
+        res = []
+        try:
+            for i in range(len(li) - 1):
+                a = li[i]
+                b = li[i + 1]
+                res.append(round(math.sqrt(a * b), 2))
+        except Exception as e:
+            return e
+        else:
+            return res
+    
+    @classmethod
+    def mult(cls, *args):
+        res = 1
+        try:
+            for i in args:
+                res *= i
+        except Exception as e:
+            return e
+        else:
+            return res
+    
+    @classmethod
+    def enum(cls, arr):
+        res = []
+        try:
+            for item in arr:
+                tmp = (arr.index(item), item)
+                res.append(tmp)
+        except Exception as e:
+            return e
+        else:
+            return res
+    
+    @classmethod
+    def median(cls, data):
+        if not(sorted(data) == data):
+            data.sort()
+        res = None
+        try:
+            if not(len(data) % 2 == 0):
+                middle = int((len(data) + 1) / 2)
+                res = data[middle - 1]
+            else:
+                middle = int((len(data) + 2) / 2)
+                middle_1 = int(len(data) / 2)
+                res = (data[middle - 1] + data[middle_1 - 1]) / 2
+        except Exception as e:
+            return e
+        else:
+            return res
+        
+    @classmethod
+    def length(cls, x):
+            counter = 0
+            try:
+                if isinstance(x, str):
+                    x = list(x)
+                for i in x:
+                    counter = counter + 1
+            except Exception as e:
+                return e
+            else:
+                return counter
+    
+    @classmethod
+    def factorial(cls, n):
+        try:
+            if n <= 1:
+                return 1
+            else:
+                fact = n * AnalysisFunctions().factorial(n - 1)
+                return fact
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def sort(cls, arr):
+        try:
+            for i in range(len(arr)):
+                for n in range(len(arr) - 1):
+                    x = arr[n]
+                    y = arr[n + 1]
+                    if y < x:
+                        tmp = x
+                        arr[n] = y
+                        arr[n + 1] = tmp
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def reverse_sort(cls, arr):
+        try:
+            for i in range(len(arr)):
+                for n in range(len(arr) - 1):
+                    x = arr[n]
+                    y = arr[n + 1]
+                    if y > x:
+                        tmp = x
+                        arr[n] = y
+                        arr[n + 1] = tmp
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def sorted(cls, arr):
+        try:
+            for i in range(len(arr)):
+                for n in range(len(arr) - 1):
+                    x = arr[n]
+                    y = arr[n + 1]
+                    if y < x:
+                        tmp = x
+                        arr[n] = y
+                        arr[n + 1] = tmp
+        except Exception as e:
+            return e
+        else:
+            return arr
+    
+    @classmethod
+    def sqre(cls, num):
+            try:
+                square = num ** 2
+            except Exception as e:
+                return e
+            else:
+                return square
+    
+    @classmethod
+    def is_divisible(cls, x, y):
+        try:
+            return x % y == 0
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def is_odd(cls, n):
+        try:
+            return n % 2 != 0
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def is_even(cls, n):
+        try:
+            return n % 2 == 0
+        except Exception as e:
+            return e
+    
+    @classmethod
+    def max(cls, arr):
+        try:
+            maxi = arr[0]
+            for elem in arr[1:]:
+                if elem > maxi:
+                    maxi = elem
+        except Exception as e:
+            return e
+        else:
+            return maxi
+    
+    @classmethod
+    def min(cls, arr):
+        try:
+            mini = arr[0]
+            for elem in arr[1:]:
+                if elem < mini:
+                    mini = elem
+        except Exception as e:
+            return e
+        else:
+            return mini
+    
 """
+It will be so kind to report bugs
+"""
+# I hate indentation problems
