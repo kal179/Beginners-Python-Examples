@@ -1,18 +1,11 @@
 import math
 
 
-class Analysis:
-	global boole_True
-	global boole_False
-	boole_True = True
-	boole_False = False
-	
-	def __init__(self, data):
-		self.data = data
-
-	def count(self, to_count):
+class AnalysisFunctions:
+	@staticmethod
+	def count(, n):
 		counter = 0
-		for i in self.data:
+		for i in :
 			if i == to_count:
 				counter = counter + 1
 		return counter		
