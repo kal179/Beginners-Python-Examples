@@ -9,5 +9,5 @@ b = { 12 , 345 , 8 , 4 , 0 , 7 , 4 , 3 , 53 , 4 , 6 , 3 }
 abInteraction = a & b      # & operator interacts two sets
 abUnion = a | b    # | operator makes union of two sets
 
-eqn = len(a) + len(b) - len(abInter)
-print(str(eqn) + ' = ' + str(len(abOuter)))
+eqn = len(a) + len(b) - len(abInteraction)
+print(str(eqn) + ' = ' + str(len(abUnion)))
