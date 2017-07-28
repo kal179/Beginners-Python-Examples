@@ -1,30 +1,32 @@
 
-class Arithmetic_progression(object):
 
-	@staticmethod
-	def arithmetic_sequence_builder(a , diff = 0, limit = 0):
-		if (diff <= 0 or limit <= 0):
-			return "Error Invalid Arguments For Difference or Limit"
+def sum_sequence(seq):
+	t1 = seq[0]
+	tn = seq[-1]
+	d = seq[1] - seq[0]
+	n = len(seq)
+	return n / 2 * (t1 + tn)
 
-		else:
-			if (limit == a):
-				return [a]
-			else:
-				seq = []
-				for i in range(a, limit + 1, diff):
-					seq.append(i + (a - 1) * 2)	
-				
-				if (a == 0):	
-					return seq[1:]
-				else:
-					return seq
-# Testing			
-print(Arithmetic_progression.arithmetic_sequence_builder(2, 2, 100))
-print(Arithmetic_progression.arithmetic_sequence_builder(1, 10, 100))
-print(Arithmetic_progression.arithmetic_sequence_builder(1, 5, 10000))
 
-"""
-Still Some Bugs are to be fixed algo is not perfect
-like sometimes it omits first value of a in seq
-and it is first term.
-"""
+def build_arithmetic_seq(start, end, diff):
+	a_seq = [start]
+	try:
+		for i in range(start, end):
+			a_seq.append(a_seq[-1] + diff)
+	except TypeError as typerr:
+		print(typerr)
+	except Exception as e:
+		print(e)
+	else:
+		return a_seq
+
+# Test 
+res = build_arithmetic_seq(1, 10, 2)
+print("Arithmetic sequence:")
+for _ in res:
+	print("  " + str(_))
+
+if sum_sequence(res) == sum(res):
+	print("My method sum_sequence works,\nSum of sequence: " + str(sum_sequence(res)))
+else:
+	print("It dosen't work!")
