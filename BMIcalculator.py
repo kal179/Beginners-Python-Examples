@@ -1,24 +1,19 @@
 # BMI calculator
-# BMI = weight / height * height
+# BMI = weight(kg) / height ** 2(m) standard metrics
+
+def body_mass_index(weight, height):
+	return round((weight) / ((height  * 0.01) ** 2), 2)
 
 while True:
-	startOrEnd = str(input('Count or End : '))
-	if startOrEnd == 'Count':
-		convFact = 0.45
-		convFactor = 0.025
-		getWeight = float(input('Weight in Pounds : '))
-		getHeight = float(input('Height in Inches : '))
-		weightInKG = getWeight * convFact
-		heightInM = (getHeight * convFactor) * (getHeight * convFactor)
-		bmIndex = weightInKG / heightInM
-		print('\nHealthy BMI ranges between 19 to 25')
-		if 18 < bmIndex < 26 :
-			print('Your BMI is ' + str(bmIndex))
-			print('You are HEALTHY\n')
+	startOrEnd = str(input('Count or End : ')).strip()
+	if startOrEnd.lower() == 'count':
+		index = body_mass_index(float(input('Weight in Kg : ')), float(input('Height in Centimetre : ')))
+		print('\nHealthy BMI ranges between 19 to 25:')
+		if 18 < index < 26 :
+			print('Your BMI is ' + str(index) + '\nYou are HEALTHY\n')
 		else : 
-			print('Your BMI is ' + str(bmIndex))
-			print('Your BodyMassIndex isn\'t between Healthy range\n')
+			print('Your BMI is ' + str(index) + '\nYour BodyMassIndex isn\'t between Healthy range\n')
 		continue	
 	else :
 		quit()
-					 
+	 
