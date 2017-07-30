@@ -1,6 +1,7 @@
 
 
 def sum_sequence(seq):
+	# Sn = n / 2 * (t1 + tn) formula from algebra
 	t1 = seq[0]
 	tn = seq[-1]
 	d = seq[1] - seq[0]
