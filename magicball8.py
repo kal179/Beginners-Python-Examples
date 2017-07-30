@@ -1,4 +1,3 @@
-# pre code
 import random
 
 # func for telling answer and asking question
@@ -9,14 +8,8 @@ def magic():
 # main Sector
 print("Hello,")
 while True:
-    # getting started
-    user  = input("Start or End: ").strip()
-    if user == "Start":
+    if input("Start or End: ").strip().lower() == "start":
         print(magic(), "\n")
         continue
-    elif user == "End":
-        print("Program ended...")
-        break
-    else :
-        print("Invalid Input.Try again.")
-        continue
+    else:
+        quit()
