@@ -1,23 +1,16 @@
 # Percantage Increase , Percentage Decrease
 
 def increasePercent(increase , origValue):
-    iPercent = increase / origValue * 100
-    return(str(iPercent) + '%')
+    return(str(increase / origValue * 100) + '%')
 
 def decreasePercent(decrease , origValue):
-    dPercent = decrease / origValue * 100
-    return(str(dPercent) + '%')
+    return(str(decrease / origValue * 100) + '%')
 
-print('Hello\n')
-print('Press Enter To Exit ')
-incOrDec = str(input('Increase or Decrease : '))
-if incOrDec == 'Increase':
-    getInc = float(input('Increased Value : '))
-    orignal = float(input('Orignal Value : '))
-    print(increasePercent(getInc , orignal))
-elif incOrDec == 'Decrease':
-    getDec = float(input('Increased Value : '))
-    orignal = float(input('Orignal Value : '))
-    print(increasePercent(getDec , orignal))
+print('Hello,\nPress Enter To Exit')
+incOrDec = str(input('increase or decrease: ')).strip().lower()
+if incOrDec == 'increase':
+    print(increasePercent(float(input('Increased Value : ')) ,  float(input('Orignal Value : '))))
+elif incOrDec == 'decrease':
+    print(increasePercent(float(input('Increased Value : ')), float(input('Orignal Value : '))))
 else:
     quit()
