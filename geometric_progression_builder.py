@@ -2,21 +2,21 @@
 Simply it just builds a geometric progression on given conditions.
 Iterates through t1 till n 
 multiplies last values in list to constant
-appende it back to list 
+append it back to list 
 COOL!
 """
 
 def build_geo_sequence(start, end, constant):
-	hold = [start]
+	temp = [start]
 	try:
 		for i in range(start, end):
-			hold.append(hold[-1] * constant)
+			temp.append(temp[-1] * constant)
 	except TypeError as te:
 		print(te)
 	except Exception as e:
 		print(e)
 	else:
-		return hold
+		return temp
 
 # Test 
 res = build_geo_sequence(1, 10, 3)
