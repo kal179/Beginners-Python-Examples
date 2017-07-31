@@ -7,8 +7,7 @@ personalities = ['Arrogant and Rude','Funny and Polite','Insane and Crazy'
 'Smart and Geek','Cool and Smart']
 
 def teller():
-    name = str(input('Tell Your Name : '))
-    randPersonality = random.choice(personalities)
-    return('According to your name You are ' + str(randPersonality) + '.')
+    input('Tell Your Name : ')
+    return('According to your name You are ' + random.choice(personalities) + '.')
 
 print(teller())
