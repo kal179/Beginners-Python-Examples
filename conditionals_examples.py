@@ -90,7 +90,3 @@ if not(number != 11):
 	print('True')
 else:
 	print('False')
-			
-
-
-
