@@ -1,5 +1,5 @@
 """
-My Modified Solution to Selection Sort Algorithm
+My Modified Solution to Selection Sort Algorithm,
 instead of swapping elem it is appended to another
 temporary array. This makes algotrihm less complicated.
 """
@@ -11,10 +11,9 @@ def selection_sort(array):
 		a = min(array)
 		temp_arr.append(a)
 		del array[array.index(a)]
-	
-	array = temp_arr
-	del temp_arr
-	return array	
+	return temp_arr
 
-nums = [4, 12, 9, 2, 5, 6, 8]	
-print selection_sort(nums)	
+# Test
+test_case = [100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90]	
+print("By Builtin method: {}".format(sorted(test_case)))
+print("By SelectionSort method: {}".format(selection_sort(test_case)))
