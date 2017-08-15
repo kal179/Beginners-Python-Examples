@@ -27,9 +27,9 @@ def decrypt(message, key):
     return final 
     
 
-def decrypt_generator(message):
+def decrypt_generator(message, n):
     # range(0, 96) because len(string_chars) == 95
-    for i in range(0, 96):
+    for i in range(0, n + 1):
         case = decrypt(message, i)
         yield case 
 
@@ -38,7 +38,7 @@ test_case = "lq01Ir1I2xyI1ncrn2*"
 result = decrypt(test_case, 9)
 print("Decrypted Text: " + result, "\n")
 
-_result = list(decrypt_generator(test_case))
+_result = list(decrypt_generator(test_case, 95))
 for res in _result:
     print("Possible text: " + res)
 # Look at ninth result
