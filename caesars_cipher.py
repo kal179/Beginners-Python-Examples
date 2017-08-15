@@ -1,3 +1,4 @@
+import string 
 
 def concat_elements(n):
     res = ""
@@ -6,14 +7,18 @@ def concat_elements(n):
     return res
 
 def encrypt(message, key):
-    if key > 26:
-        return "Invalid argument for key!"
+    string_chars = list(string.ascii_uppercase) + list(string.ascii_lowercase) + list(string.digits) + list(string.punctuation) + [" "]
     try:
         splitted_message = list(message)
     except TypeError:
         return "Expected an string for message!"
+        
     for char in splitted_message:
-        tmp = chr(ord(char) + key)
+        try:
+            tmp = string_chars[string_chars.index(char) + key]
+        except IndexError:
+            tmp_key = (string_chars.index(char) + key) -  len(string_chars)
+            tmp = string_chars[tmp_key]
         splitted_message[splitted_message.index(char)] = tmp
         
     final = concat_elements(splitted_message)
@@ -22,6 +27,7 @@ def encrypt(message, key):
 def n_encrypt(ciph, key, times):
     # You can modify this to take multiple keys
     i = 0
+    ciph = ""
     while i < times:
         ciph = encrypt(ciph, key)
         i += 1
@@ -29,6 +35,6 @@ def n_encrypt(ciph, key, times):
         
 
 # Test
-mesage = "Hey there how are you?"
+mesage = "This is top secret!"
 result = encrypt(mesage, 9)
-print("Encrypted Message: " + result)
+print("Encrypted Text: " + result)
