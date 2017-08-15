@@ -1,24 +1,39 @@
-print("Hello,")
-while True:
-	start_or_end = str(input("Start or End : "))
-	print(" ")
-	if start_or_end.strip() == "Start":
-		get_text = str(input("Text to decode : "))
-		get_key = int(input("Key : "))
+import string 
+# Note: this decryption function is designed to decrypt messages encrypted by encryption function i wrote(avaliable in this repo)
 
-		decoded = []
+def concat_elements(n):
+    res = ""
+    for i in n:
+        res += i 
+    return res
 
-		for i in get_text:
-			decoded_char = chr(ord(i) - get_key)
-			decoded.append(decoded_char)
 
-		decoded_text = ""
+def decrypt(message, key):
+    string_chars = list(string.ascii_uppercase) + list(string.ascii_lowercase) +  list(string.digits) + list(string.punctuation) + [" "]
+    try:
+        splitted_message = list(message)
+    except TypeError:
+        return "Expected an string for text!"
+        
+    for char in splitted_message:
+        try:
+            tmp = string_chars[string_chars.index(char) - key]
+        except IndexError:
+            tmp_key = (string_chars.index(char) + key) +  len(string_chars)
+            tmp = string_chars[tmp_key]
+        splitted_message[splitted_message.index(char)] = tmp
+        
+    final = concat_elements(splitted_message)
+    return final 
+    
 
-		for a in decoded:
-			decoded_text = decoded_text + str(a)
+def decrypt_generator(message):
+    # range(0, 96) because len(string_chars) == 95
+    for i in range(0, 96):
+        case = decrypt(message, i)
+        yield case 
 
-		print("Decrypted Text : " + decoded_text)
-		print(" ")
-		continue
-	else:
-		break
+# Test 
+test_case = "lq01Ir1I2xyI1ncrn2*"
+result = decrypt(test_case, 9)
+print("Decrypted Text: " + result)
