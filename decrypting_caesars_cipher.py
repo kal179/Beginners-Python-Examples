@@ -36,4 +36,9 @@ def decrypt_generator(message):
 # Test 
 test_case = "lq01Ir1I2xyI1ncrn2*"
 result = decrypt(test_case, 9)
-print("Decrypted Text: " + result)
+print("Decrypted Text: " + result, "\n")
+
+_result = list(decrypt_generator(test_case))
+for res in _result:
+    print("Possible text: " + res)
+# Look at ninth result
