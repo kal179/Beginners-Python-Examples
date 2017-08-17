@@ -1,5 +1,8 @@
 # Here I've implemented a method of finding square root of imperfect square 
+# Steps (Pseudocode): visit http://burningmath.blogspot.in/2013/12/finding-square-roots-of-numbers-that.html
+# Read the steps carefully or you'll not understand the program!
 
+# To check is number is a perfect square or not
 def is_perfect_square(n):
     if isinstance(n, float):
         return (False, None)
@@ -8,10 +11,13 @@ def is_perfect_square(n):
             return (True, i)
     return (False, None)
 
-def average(li):
-    return sum(li) / len(li)
+# Average 
+def average(*args):
+    hold = list(args)
+    return sum(hold) / len(hold)
 
 # Method  
+# Just implementation of steps on above webpage
 def sqrt_of_imperfect_square(a):
     is_square = is_perfect_square(a)
     if is_square[0]:
@@ -22,7 +28,7 @@ def sqrt_of_imperfect_square(a):
         s1 = max([float(x * x) for x in range(0,a)])
         while True:
             s2 = a / s1
-            tmp = average([s1, s2])
+            tmp = average(s1, s2)
             if not(round(tmp * tmp, 6) == float(a)):
                 s1 = tmp
                 continue
