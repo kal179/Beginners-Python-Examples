@@ -28,7 +28,7 @@ def sqrt_of_imperfect_square(a):
                 continue
             else:
                 return tmp
-        return -1
+        return -1  # This condition will normally never occur
         
 # Test
 case = 2613
