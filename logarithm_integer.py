@@ -7,7 +7,7 @@
 # So we have to find y!
 
 # Don't use it for decimal numbers
-# No log(1000) or log(e, x) is automatically avaliable
+# log(1000) or log(e, x) is not automatically avaliable
 def logarithm_integer(b, x):
 	if (b > 0 and b != 1) and x > 0:
 		for i in range(x):
