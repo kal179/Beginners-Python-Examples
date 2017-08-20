@@ -6,22 +6,22 @@
 # return the result
 
 def binary_to_decimal(X):
-    res = 0;
-    list_binary = list(X);
+    res = 0
+    list_binary = list(X)
     try:
         for i in range(len(list_binary)):
             if not(list_binary[i] == "0"):
-                res += 2 ** i;
+                res += 2 ** i
             else:
-                pass;
+                pass
     except TypeError:
         return "Expected a string containing binary number!"
     except ValueError:
         return "Invalid input or value!"
     else:
-        return res;
+        return res
 
 # Test
 case = "11111111" * 4;
 res = binary_to_decimal(case);
-print("Input(binary): {}\nValue(decimal): {}".format(case, res)); # 32-bit value!
+print("Input(binary): {}\nValue(decimal): {}".format(case, res)) # 32-bit value!
