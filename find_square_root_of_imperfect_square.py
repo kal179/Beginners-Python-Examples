@@ -18,7 +18,7 @@ def average(*args):
 
 # Method  
 # Just implementation of steps on above webpage
-def sqrt_of_imperfect_square(a):
+def sqrt_of_imperfect_square(a, certainty = 6):
     is_square = is_perfect_square(a)
     if is_square[0]:
         return "{} is a perfect square .It's root is {}.".format(a, is_square[1])
@@ -29,16 +29,16 @@ def sqrt_of_imperfect_square(a):
         while True:
             s2 = a / s1
             tmp = average(s1, s2)
-            if not(round(tmp * tmp, 6) == float(a)):
+            if not(round(tmp * tmp, certainty) == float(a)):
                 s1 = tmp
                 continue
             else:
-                return tmp
+            	return tmp
         return -1  # This condition will normally never occur
         
 # Test
 case = 2613
-res = sqrt_of_imperfect_square(case)
+res = sqrt_of_imperfect_square(case, 9)
 print("Test case: " + str(case))
 print("Root: " + str(res))
-print("Root Squared: " + str(round(res * res, 2)))
+print("Root Squared: " + str(res * res))
