@@ -9,9 +9,13 @@ while(2==2):
        if get == 5:
            print("You Win")
            break
-       elif get <= 4:
+       elif get =4:
              print("Number you entered is Too Low")
-       elif  get >= 6:
+       elif  get > 6:
+              print("Number you enetred is Too High")
+       elif get < 4:
+             print("Number you entered is Too Low")
+       elif  get = 6:
               print("Number you enetred is Too High")
    elif start == "End":
        print("Game Ended")
