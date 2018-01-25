@@ -17,8 +17,8 @@ while(True):
     
     # Main interface
     if start_or_end == 'start':
-        res = thrust_props(float(input('Diameter of propeller: ')) , float(input('Velocity of air flow: ')) , float(input('Additional propeller acceleration, velocity: ')) , float(input('Fluid density: ')))
-        print("Thrust of propeller: {}".format(res)) 
+        res = thrust_props(float(input('\nDiameter of propeller: ')) , float(input('Velocity of air flow: ')) , float(input('Additional propeller acceleration, velocity: ')) , float(input('Fluid density: ')))
+        print("\nThrust of propeller: {}".format(res)) 
     
     else:
         quit()
