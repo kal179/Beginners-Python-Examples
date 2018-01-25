@@ -35,3 +35,6 @@ while True:
 	continue
 
 # Is an infinite loop if usr keeps guessing wrong
+# an extra loop can be added to play game as long as user wants
+# or can play number of times the user entered!
+# Also can be made more harder to play
