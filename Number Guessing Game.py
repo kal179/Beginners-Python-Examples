@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: <encoding name> -*-
+# -*- coding: utf-8 -*-
 
 from random import randint as r_int 
 
