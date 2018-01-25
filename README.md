@@ -8,6 +8,9 @@ Hey guys i wrote these programs when i was just starting up with programming, no
 
 Note: In 2.x versions input isn't useful , lly , in 3.x versions raw_input isn't useful. Also, xrange() and other methods are discontinued or changed in 3.x versions of python. Change the keywords accordingly! 
 
+<pre>
+<strong>NOTE: WORK IN PROGRESS!</strong>
+</pre>
 <br><br>
 Also see this : Beginners-Python-Examples/CONTRIBUTING.md<br>
 contact kalpaktake@gmail.com
