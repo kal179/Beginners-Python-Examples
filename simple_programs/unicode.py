@@ -1,12 +1,10 @@
 #!/usr/bin/python
 # -*- coding: <encoding name> -*-
 
-
 # returns UNICODE value of a character
 def get_ascii(S):
 	# even if string has only 1 character 
 	# it yields same for all
-
 	if len(S) > 0:
 		for char_ in list(S):
 			yield((char_, ord(char_)))
@@ -23,5 +21,4 @@ for test_case in test_characters:
 	codes = list(get_ascii(test_case))
 	for code in codes:
 		print("  character: {}, unicode_val: {}".format(code[0], code[1]))
-
 	print(" ")
