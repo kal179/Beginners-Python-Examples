@@ -8,7 +8,7 @@
 # return sum
 
 def sum_(*args):
-	res = 0
+	res = 0.0
 	for arg in args:
 		res += arg
 	return res
@@ -23,7 +23,7 @@ def sum_ar(ar, end_i):
 	else:
 		end_i = len(ar) - 1
 
-	res = 0
+	res = 0.0
 	for elem in ar[:end_i + 1]:
 		res += elem 
 
