@@ -10,7 +10,7 @@
 # string[::-1] is a clever way to reverse string
 # string from start index to end index 
 # whose difference is -1(reverse)
-# found on satck overflow, very pythonic
+# found on stack overflow, very pythonic
 
 def is_palindrome(s) :
 	if s[::-1] == s:
