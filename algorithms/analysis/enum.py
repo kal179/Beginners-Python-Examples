@@ -5,7 +5,7 @@
 # yields a tuple of element and it's index
 def enum(ar):
 	for index in range(len(ar)):
-		yield((ar[index], index))
+		yield((index, ar[index]))
 
 # Test
 case_1 = [19, 17, 20, 23, 27, 15]
