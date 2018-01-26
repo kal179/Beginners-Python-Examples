@@ -1,6 +1,6 @@
 
 <pre>
-<i>'math'</i> Sub-directory contains all <strong>algorithms</strong>
+<i>'algorithms'</i> Sub-directory contains all <strong>algorithms</strong>
 further separated in different particular sub directories
 </pre>
 The programs have been <strong>re-checked</strong> and <strong>re-mastered</strong> by me! <br/>
