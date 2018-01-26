@@ -38,6 +38,7 @@ def median(ar, ranked = False):
 # Test
 odd = [123, 456, 789, 101112, 131415, 161718, 192021, 222324, 252627]
 even = [8, 7, 5, 2, 1, 3, 4, 6]
+
 if median(odd, ranked = True) == 131415 and median(even) == 4.5:
 	
 	# Print statements on separate lines look better
@@ -49,6 +50,6 @@ else:
 	# If algo didn't work
 	print("There's something wrong!")
 
-# This median is for un-distributed data
+# This median is for un-distributed/un-grouped data
 # i.e. no frequencies
 # plain numbers in an array
