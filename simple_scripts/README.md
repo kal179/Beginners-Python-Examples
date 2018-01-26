@@ -1,6 +1,6 @@
 
 <pre> 
-<i>'simple_programs'</i> Sub-directory contains all simplest programs,
+<i>'simple_scripts'</i> Sub-directory contains all simplest programs,
 these programs are <strong>simple to read/write</strong>.
 
 The programs have been <strong>re-checked</strong> and <strong>re-mastered</strong> by me!
