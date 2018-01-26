@@ -13,7 +13,7 @@
 # to sort array in reverse/decending
 # order
 
-def sort_(arr, temporary = False):
+def sort_(arr, temporary = False, reverse = False):
 	
 	# Making copy of array if temporary is true
 	if temporary:
@@ -77,7 +77,7 @@ for test in tests:
 	if accend == sorted(test) and decend == sorted(test, reverse = True):
 		print("Orignal: {}".format(test))
 		print("Sorted: {}".format(accend))
-		print("Sorted(reverse): {}".format(decend))
+		print("Sorted(reverse): {}\n".format(decend))
 	else:
 		print("Something went wrong!\n")
 
