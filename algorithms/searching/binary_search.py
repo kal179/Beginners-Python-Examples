@@ -20,9 +20,12 @@ import sys
 # as binary search won't work on an un-sorted array
 
 def binary_search(arr, f, l, v, sorted_ar = False):
+	# need an ordered/sorted array for search, 
+	# else search won't produce desirable results
 	if not sorted_ar:
 		arr.sort()
-
+	
+	# If input is invalid
 	if l - f < 0:
 		return -1
 
