@@ -34,6 +34,7 @@ tests = [
 	]
 ]
 
+# Does not test last condition of function
 for test in tests:
 	for n, index, array_n in compare_array_elements(test[0], test[1]):
 		print("  [ %i ] is biggest value at index(%i) from array(%i)" %(n, index, array_n))
