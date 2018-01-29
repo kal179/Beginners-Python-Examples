@@ -1,3 +1,6 @@
+# THIS SCRIPT IS TO UNDERSTAND
+# THAN TO EXECUTE!
+
 # Conditionals Examples
 # if , elif , else 
 
