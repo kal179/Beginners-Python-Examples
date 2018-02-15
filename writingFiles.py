@@ -15,5 +15,5 @@ fileToWrite.close() # closing the file
 
 textToWrite = str(input('Text to write : '))
 fileName = str(input('File name : ')) 
-with open(filename,'w') as fileToWrite:
+with open(fileName,'w') as fileToWrite:
   fileToWrite.write(textToWrite) 
