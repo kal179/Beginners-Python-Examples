@@ -9,3 +9,13 @@ def avgSums():
 	return(summed)
 
 print(avgSums)	
+
+# We can also genralise this operation using *argv
+# *argv is used when we don't know the number of parameters
+
+def avgSums(*argv):
+	summingUp = 0
+	for lst in argv:
+		summingUp = summingUp + sum(lst)
+	summed = summingUp /float(len(argv))
+	return(summed)
