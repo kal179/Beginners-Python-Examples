@@ -111,7 +111,9 @@ if __name__ == '__main__':
     linked_list.head = node1
     linked_list.head.next = node2
     node2.next = node3
-    linked_list.insert_front(0) 
-    linked_list.insert_after(node2, 5)
-    linked_list.insert_last(20)
-    linked_list.print_list()
+    linked_list.insert_front(0) #adding a new value to the front of the list (insert)
+    linked_list.insert_after(node2, 5) #adding a new value after tne second node
+    linked_list.insert_last(20) #adding a new value at the end of the list (push)
+    linked_list.print_list() #printing the list
+
+    
