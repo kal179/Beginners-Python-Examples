@@ -1,3 +1,8 @@
+"""
+Made by github.com/ClarkeCDC
+Don't edit the passwords.csv file
+"""
+
 import random
 import csv
 
