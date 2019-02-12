@@ -1,25 +1,35 @@
 # Prime number Determiner
 # replace input() with raw_input() in Python version 2.7 input() works with version 3 
+import math as Math
+
+POSITIVE_MESSAGE = " is a prime number"
+NEGATIVE_MESSAGE = " is not a prime number"
+
+
+def is_number_prime(number):
+    upper_lim = Math.floor(Math.sqrt(number)) + 1
+    is_prime = True if number != 1 else False
+
+    for i in range(2, upper_lim):
+        if number % i == 0:
+            is_prime = False
+            break
+
+    return is_prime
+
 
 while True:
-	startOrEnd = str(input('Start or End : '))
-	if startOrEnd == 'Start':
-		toCheckNum = int(input('Number to Check : '))
-		if toCheckNum > 1:
-			for x in range(2, toCheckNum):
-				if toCheckNum % x == 0:
-					print(str(toCheckNum) + ' is divisible by ' + str(x))
-					print(str(toCheckNum) + ' is not a Prime number')
-					break
-				elif toCheckNum % x > 0:
-					print(str(toCheckNum) + ' is a prime number')
-					break
-			continue				
-		else :
-			print(str(toCheckNum) + ' is not a prime number')
-			continue					
-	else : 
-		print('Progarm Ended...')
-		break		
+    startOrEnd = str(input('Start or End : '))
+    if startOrEnd == 'Start':
+        number = int(input('Number to Check : '))
+        result = str(number)
+        prime_status = is_number_prime(number)
 
-
+        if prime_status:
+            result += POSITIVE_MESSAGE
+        else:
+            result += NEGATIVE_MESSAGE
+        print(result)
+    else:
+        print('Program Ended...')
+        break
