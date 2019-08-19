@@ -11,8 +11,8 @@ def determine_quadrant(x, y):
 			return 'III(-,-)'
 		elif x > 0 and y < 0 :
 			return 'IV(+,-)'
-		else :
-			return 'Invalid parameters were provided')
+		else:
+			return ('Invalid parameters were provided')
 	except TypeError:
 		return "X and Y co-ords must be integers and not X {}, Y{}".format(type(x), type(y))
 
