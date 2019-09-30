@@ -23,7 +23,7 @@ for i in range(8):
 print()
 
 print("System high intensity colors: ", end="")
-for i in range(7, 16):
+for i in range(8, 16):
     print_square_8bit(i)
 print()
 
