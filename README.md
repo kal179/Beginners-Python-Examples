@@ -1,7 +1,7 @@
 # Beginners-Python-Programs
 Basic python CLI programs as examples<br>
 All the examples are useful examples<br>
-This examples are of beginners level<br>
+These examples are of beginners' level<br>
 <br>
 Hey guys I wrote these programs when I was just starting up with programming, now I realize that many of 'em feel very un-professional and useless so I decided to go one by one through all and make 'em more usefull and professional !
 <br>
