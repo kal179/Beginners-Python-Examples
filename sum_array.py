@@ -5,7 +5,7 @@ def sum_arr(n):
     return res
 
 nums = [52345,746587,98589,54398,9348,45887,49856]
-test = sum_arr(nums)
+test = sum_arr(nums) #Python built in method of adding list all element
 if test == sum(nums):
     print("Sum of arr: {}".format(test))
 else:
