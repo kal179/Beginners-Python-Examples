@@ -1,4 +1,5 @@
-# Python program to check if the number is an Armstrong number or not
+# Python program to check if the number is an Armstrong number with the index of 3 or not
+# for input try numbers 153, 370, 371, 407
 
 # take input from the user
 num = int(input("Enter a number: "))
@@ -15,6 +16,6 @@ while temp > 0:
 
 # display the result
 if num == sum:
-   print(num,"is an Armstrong number")
+   print(num, "is an Armstrong number.")
 else:
-   print(num,"is not an Armstrong number")
+   print(num, "is not an Armstrong number.")
