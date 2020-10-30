@@ -12,5 +12,6 @@ while True:
     print("")
     continue
   else:
+    # What did the user earn? lol
     print("You earned.")
     break
