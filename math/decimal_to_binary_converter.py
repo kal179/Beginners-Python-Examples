@@ -13,4 +13,4 @@ def dec_to_bin(n):
     return binary
 
 for i in range(0,101):
-    print(dec_to_bin(i))
+    print("Decimal:"+str(i)+" Binary:"+str(dec_to_bin(i)))
