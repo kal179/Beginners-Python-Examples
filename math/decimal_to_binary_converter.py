@@ -1,3 +1,8 @@
+"""
+I came up with this algorithm to convert decimal(natural numbers only xd) to binary completely from scratch and 
+therefore it might not be the best most efficient implementation.
+Optimizations are welcome.
+"""
 
 def dec_to_bin(n):
     quo = n 
@@ -13,4 +18,4 @@ def dec_to_bin(n):
     return binary
 
 for i in range(0,101):
-    print("Decimal:"+str(i)+" Binary:"+str(dec_to_bin(i)))
+    print("Natural Number:"+str(i)+" Binary:"+str(dec_to_bin(i)))
