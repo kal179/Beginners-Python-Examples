@@ -12,5 +12,6 @@ Update: I wrote these programs when I was just starting out with programming, no
 Files outside particular directories have not been checked yet <br>
 Files inside, directories offer better code and explanation
 <br>
+<br>
 Also see this : Beginners-Python-Examples/CONTRIBUTING.md<br>
 contact electric.vision.x19@gmail.com
