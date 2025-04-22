@@ -32,7 +32,7 @@ class Dict:
 
 	def view_all(self):		
 		for i in dictionary.keys():
-			print(i + " : " + dictionary[i])
+			print(f"{i} : {dictionary[i]}")
 
 def start():
 	get_op = input("Add, Delete, Edit, View, View all : ")
@@ -81,4 +81,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+	main()	
