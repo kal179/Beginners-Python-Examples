@@ -1,5 +1,5 @@
 # Beginners-Python-Programs
-<strong>I created this repo years ago when in school. From now it will be available as a public archive only.</strong><br/><br/>
+<strong>Repository will be available as a public archive only.</strong><br/><br/>
 
 Basic python CLI programs as examples.<br>
 All the examples are useful examples.<br>
