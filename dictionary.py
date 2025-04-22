@@ -1,4 +1,3 @@
-
 global dictionary
 dictionary = {}
 
@@ -72,7 +71,7 @@ def end():
 def main():
 	while True:
 		s_or_e = input("Start or End : ")
-		if s_or_e == "Start":
+		if s_or_e.lower() == "start":
 			start()
 			print("  ")
 			continue
@@ -82,4 +81,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()		
+	main()	
