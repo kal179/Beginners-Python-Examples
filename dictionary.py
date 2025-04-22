@@ -9,27 +9,27 @@ class Dict:
 
 	def add_new(self):
 		dictionary[self.word] = self.meaning
-		print ("Word Successfully Added")
+		print("Word Successfully Added")
 
 	def delete_word(self):
 		try:
 			del dictionary[self.word]
-			print ("Word Successfully Deleted")
+			print("Word Successfully Deleted")
 		except KeyError:
-			print "(The Word Does Not Exist in Dictionary. Try Again!")	
+			print("The Word Does Not Exist in Dictionary. Try Again!")	
 			
 	def edit_word(self):
 		try:
 			dictionary[self.word] = self.meaning
-			print ("Word Was Successfully Edited")
+			print("Word Was Successfully Edited")
 		except KeyError:
-			print ("The Word You Trying To Edit Does Not Exist in Dictionary!")	
+			print("The Word You Trying To Edit Does Not Exist in Dictionary!")	
 
 	def view_word(self):
 		try:
-			print (dictionary[self.word])
+			print(dictionary[self.word])
 		except KeyError:
-			print ("The Word is not in Dictionary.")
+			print("The Word is not in Dictionary.")
 
 	def view_all(self):		
 		for i in dictionary.keys():
@@ -64,7 +64,7 @@ def start():
 		nothing.view_all()
 
 	else:
-		print ("Invalid Input. Try again!")			
+		print("Invalid Input. Try again!")			
 
 def end():
 	quit()
